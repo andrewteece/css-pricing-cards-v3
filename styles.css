@@ -1,14 +1,15 @@
 :root {
 
-    --clr-primary-400: hsl(234, 49%, 42%);
+    --clr-primary-400: hsl(234, 49%, 42%); 
 
-    --clr-neutral-100: hsl(0, 0%, 100%);
-    --clr-neutral-200: hsl(0, 0%, 98%);
-    --clr-neutral-300: hsl(264, 10%, 90%);
-    --clr-neutral-400: hsl(0, 0%, 31%);
+    --clr-neutral-100: hsl(0, 0%, 100%); /* #fff */
+    --clr-neutral-200: hsl(0, 0%, 98%); /* #fafafa */
+    --clr-neutral-300: hsl(264, 10%, 90%); /* #e5e3e8 */
+    --clr-neutral-400: hsl(0, 0%, 31%); /* #4e4e4e */
     
-    --clr-accent-400: hsl(184, 100%, 34%);
-    --clr-accent-500: hsl(181, 60%, 16%);
+    --clr-accent-300: hsl(210, 25%, 73%);
+    --clr-accent-400: hsl(184, 100%, 34%); /* #00cdac */
+    --clr-accent-500: hsl(181, 60%, 16%); /* #114243 */
 
     --ff-primary: 'Roboto', sans-serif;
 
@@ -33,6 +34,11 @@
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    display: block;
 }
 
 /* General Styles */
@@ -98,4 +104,67 @@ body {
     padding: 2em;
     border-radius: 1em;
     margin: 0 0.5em;
+}
+
+.plan--light {
+    color: var(--clr-neutral-400);
+    background: linear-gradient(-45deg, var(--clr-neutral-300, var(--clr-neutral-200)))
+}
+
+.plan--light .plan__price {
+    color: var(--clr-accent-400);
+}
+
+.plan--light .button {
+    background: var(--clr-neutral-100);
+    color: var(--clr-neutral-400);
+}
+
+.plan--accent {
+    color: var(--clr-neutral-100);
+    background: var(--clr-neutral-400);
+}
+
+.plan--accent .button {
+    background: var(--clr-neutral-100);
+    background: var(--clr-neutral-400);
+}
+
+.plan__title {
+    text-transform: uppercase;
+    margin: 0 0 1em;
+}
+
+.plan__price span {
+    display: block;
+    font-size: var(--fs-600);
+    font-weight: var(--fs-300);
+}
+
+.plan__description {
+    margin: 2em 0;
+    line-height: 1.5;
+}
+
+/* Team Section */
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background: var(--clr-accent-300);
+    text-align: left;
+    flex: 1 1 45%;
+    margin: 1em;
+    display: flex;
+    border-radius: .5em;
+    align-items: center;
+    padding: .5em 2em .5em .5em;
+}
+
+.team-member img {
+    width: 10rem;
+    border-radius: .25em;
 }
