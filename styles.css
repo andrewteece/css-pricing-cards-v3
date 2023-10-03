@@ -46,14 +46,18 @@ img {
 body {
     font-family: var(--ff-primary);
     text-align: center;
+    margin: 0;
+}
+
+section {
+    padding: 6rem 0;
 }
 
 .section-title {
     font-size: var(--fs-800);
     text-transform: uppercase;
     font-weight: var(--fw-900);
-    margin-top: 3em;
-    margin-bottom: 0;
+    margin: 0;
     color: var(--clr-accent-400)
 }
 
@@ -67,6 +71,24 @@ body {
     margin: 0 auto;
     max-width: 62.5rem;
 }
+
+/* Utility */
+
+.bg-light {
+    color: var(--clr-neutral-400);
+    background: linear-gradient(-45deg, #e5e3e8, #fafafa); 
+}
+
+.bg-accent {
+    color: var(--clr-neutral-100);
+    background: linear-gradient(-45deg, #00a1ab, #3741a0);  
+}
+
+.bg-dark {
+    color: var(--clr-neutral-100);
+    background: var(--clr-neutral-400);
+}
+
 
 /* Buttons */
 
@@ -100,45 +122,44 @@ body {
 }
 
 .plan {
-    width: 12.5rem;
+    width: 16.5rem;
     padding: 2em;
     border-radius: 1em;
     margin: 0 0.5em;
 }
 
-.plan--light {
-    color: var(--clr-neutral-400);
-    background: linear-gradient(-45deg, var(--clr-neutral-300, var(--clr-neutral-200)))
-}
-
-.plan--light .plan__price {
+.bg-light .plan__price {
     color: var(--clr-accent-400);
 }
 
-.plan--light .button {
+.bg-dark .button {
     background: var(--clr-neutral-100);
     color: var(--clr-neutral-400);
 }
 
-.plan--accent {
-    color: var(--clr-neutral-100);
-    background: var(--clr-neutral-400);
-}
-
-.plan--accent .button {
+.bg-light .button {
     background: var(--clr-neutral-100);
     background: var(--clr-neutral-400);
 }
 
 .plan__title {
+    font-size: var(--fs-400);
     text-transform: uppercase;
     margin: 0 0 1em;
 }
 
+.plan__price {
+    font-size: var(--fs-900);
+    line-height: 1;
+    font-weight: var(--fw-900);
+    margin: 0;
+}
+
 .plan__price span {
     display: block;
-    font-size: var(--fs-600);
-    font-weight: var(--fs-300);
+    font-size: var(--fs-500);
+    font-weight: var(--fw-300);
+    
 }
 
 .plan__description {
@@ -148,6 +169,9 @@ body {
 
 /* Team Section */
 
+.team {
+    background: var(--clr-neutral-200);
+}
 .team-members {
     display: flex;
     flex-wrap: wrap;
