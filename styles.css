@@ -1,6 +1,7 @@
 :root {
 
-    --clr-primary-400: hsl(234, 49%, 42%); 
+    --clr-primary-500: hsl(234, 49%, 42%); 
+    --clr-primary-400: hsl(184, 100%, 34%);
 
     --clr-neutral-100: hsl(0, 0%, 100%); /* #fff */
     --clr-neutral-200: hsl(0, 0%, 98%); /* #fafafa */
@@ -75,11 +76,19 @@ section {
 /* Utility */
 
 .bg-light {
+    --bg: var(--clr-neutral-400);
+    --fg: var(--clr-neutral-100);
+    --pop: var(--clr-primary-400);
+
     color: var(--clr-neutral-400);
     background: linear-gradient(-45deg, #e5e3e8, #fafafa); 
 }
 
 .bg-accent {
+    --bg: var(--clr-neutral-100);
+    --fg: var(--clr-neutral-400);
+    --pop: var(--clr-neutral-100);
+
     color: var(--clr-neutral-100);
     background: linear-gradient(-45deg, #00a1ab, #3741a0);  
 }
@@ -99,7 +108,7 @@ section {
     border-radius: .5em;
     text-transform: uppercase;
     font-weight: var(--fw-700);
-    background-color: var(--clr-neutral-400);
+    background-color: var(--clr-accent-400);
     color: var(--clr-neutral-100);
 }
 
@@ -138,8 +147,13 @@ section {
 }
 
 .bg-light .button {
-    background: var(--clr-neutral-100);
     background: var(--clr-neutral-400);
+    color: var(--clr-neutral-100);
+}
+
+.bg-accent .button {
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-neutral-400);
 }
 
 .plan__title {
@@ -178,17 +192,40 @@ section {
 }
 
 .team-member {
-    background: var(--clr-accent-300);
     text-align: left;
     flex: 1 1 45%;
     margin: 1em;
     display: flex;
-    border-radius: .5em;
+    border-radius: 1em;
     align-items: center;
     padding: .5em 2em .5em .5em;
 }
 
 .team-member img {
     width: 10rem;
-    border-radius: .25em;
+    border-radius: 1em;
+}
+
+.team-member .name {
+    font-size: var(--fs-600);
+    line-height: 1;
+    font-weight: var(--fw-900);
+    color: var(--pop);
+    margin: 0;
+}
+
+.team-member .position {
+    margin-top: 0;
+    font-weight: var(--fw-700);
+    opacity: 0.8;
+}
+
+.team-member--mirrored {
+    padding: .5em .5em .5em 2em;
+}
+
+.team-member--mirrored img {
+    order: 2;
+    margin-right: 0;
+    margin-left: 1em;
 }
