@@ -108,8 +108,8 @@ section {
     border-radius: .5em;
     text-transform: uppercase;
     font-weight: var(--fw-700);
-    background-color: var(--clr-accent-400);
-    color: var(--clr-neutral-100);
+    background-color: var(--bg, var(--clr-primary-400));
+    color: var(--fg, var(--clr-neutral-100));
 }
 
 .button--light {
@@ -141,10 +141,10 @@ section {
     color: var(--clr-accent-400);
 }
 
-.bg-dark .button {
+/* .bg-dark .button {
     background: var(--clr-neutral-100);
     color: var(--clr-neutral-400);
-}
+} 
 
 .bg-light .button {
     background: var(--clr-neutral-400);
@@ -154,7 +154,7 @@ section {
 .bg-accent .button {
     background-color: var(--clr-neutral-100);
     color: var(--clr-neutral-400);
-}
+} */
 
 .plan__title {
     font-size: var(--fs-400);
