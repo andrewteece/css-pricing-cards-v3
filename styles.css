@@ -94,6 +94,7 @@ section {
 }
 
 .bg-dark {
+    --pop: var(--clr-neutral-100);
     color: var(--clr-neutral-100);
     background: var(--clr-neutral-400);
 }
@@ -104,6 +105,7 @@ section {
 .button {
     display: inline-block;
     text-decoration: none;
+    margin-top: 1em;
     padding: 0.5em 0.75em;
     border-radius: .5em;
     text-transform: uppercase;
@@ -130,6 +132,14 @@ section {
     margin: 2em 0;
 }
 
+@media (max-width: 35em) {
+    .plans {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em
+    }
+}
+
 .plan {
     width: 16.5rem;
     padding: 2em;
@@ -137,11 +147,11 @@ section {
     margin: 0 0.5em;
 }
 
-.bg-light .plan__price {
+/* .bg-light .plan__price {
     color: var(--clr-accent-400);
 }
 
-/* .bg-dark .button {
+ .bg-dark .button {
     background: var(--clr-neutral-100);
     color: var(--clr-neutral-400);
 } 
@@ -167,6 +177,7 @@ section {
     line-height: 1;
     font-weight: var(--fw-900);
     margin: 0;
+    color: var(--pop);
 }
 
 .plan__price span {
@@ -203,6 +214,7 @@ section {
 
 .team-member img {
     width: 10rem;
+    margin-right: 1em;
     border-radius: 1em;
 }
 
