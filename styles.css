@@ -210,11 +210,12 @@ section {
     border-radius: 1em;
     align-items: center;
     padding: .5em 2em .5em .5em;
+    gap: 1em;
 }
 
 .team-member img {
     width: 10rem;
-    margin-right: 1em;
+    
     border-radius: 1em;
 }
 
@@ -224,6 +225,7 @@ section {
     font-weight: var(--fw-900);
     color: var(--pop);
     margin: 0;
+    outline: 2px solid red;
 }
 
 .team-member .position {
@@ -238,6 +240,4 @@ section {
 
 .team-member--mirrored img {
     order: 2;
-    margin-right: 0;
-    margin-left: 1em;
 }
